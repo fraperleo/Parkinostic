@@ -1,0 +1,52 @@
+<ion-view view-title="Parkinostic">
+<style type="text/css">
+.col {height: 70%; text-align: center;margin: 20px;}
+</style>
+
+
+<ion-content>
+
+    <div class = "row">
+
+       <button class="col button button-outline button-stable" ng-click="goPatient()" style="border-radius:25px 25px 25px 25px;">
+       <a class="button button-icon icon ion-ios-body"></a>
+       <p>Datos Pacientes</p>
+       </button>      
+
+       <button class="col button button-outline button-balanced" ng-click="goHistorico()" style="border-radius:25px 25px 25px 25px;">
+       <a class="button button-icon icon  ion-ios-calendar-outline"></a>
+       <p>Histórico</p>
+       </button>
+
+    </div>
+
+
+    <div class = "row">
+      
+       <button class="col button button-outline button-positive" ng-click="goTest1()" style="border-radius:25px 25px 25px 25px;">
+       <a class="button button-icon icon ion-plus-circled"></a>
+       <p>Nuevo Test</p>
+       </button>      
+
+       <button class="col button button-outline button-assertive" ng-click="goTest2()" style="border-radius:25px 25px 25px 25px;">
+       <a class="button button-icon icon ion-checkmark-circled"></a>
+       <p>Test UPDRS</p>
+       </button>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <p class="calm" style="text-align: center;">Nuhsa escrito o escaneado: {{caso.nuhsa}}</p>
+    <br>
+    <br>
+    
+    <div style=" padding-left: 33%;">
+    <button class="button button-positive" style="width: 50%;" ng-click="exit()">Salir</button>
+    <div>
+
+</ion-content>
+
+</ion-view>

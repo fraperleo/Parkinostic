@@ -1,0 +1,41 @@
+<ion-view view-title="">
+
+<ion-nav-buttons side="left">
+  <button class="button button-icon icon ion-home" ng-click="atras()"> Menu </button>
+</ion-nav-buttons>
+
+<ion-nav-buttons side="right">
+      <div class="buttons">
+        <button class="button button-icon icon ion-loop" ng-click="refresh()"></button>
+      </div>
+</ion-nav-buttons>
+
+
+  <ion-content>
+    
+  <ion-refresher
+    pulling-text="Refrescando..."
+    on-refresh="refresh()">
+  </ion-refresher>
+
+    <p ng-hide="isEmpty()" class="ng-hide" style="color:blue; text-align: center;"> <br> No tiene mensajes actualmente </p>
+
+    <ion-list>
+
+    <ion-item class="item-icon-left item-icon-right" ng-repeat="message in  caso.historico | orderBy: !'fecha'" type="item-text-wrap" href="#/historico/{{message.id}}">
+
+        <i class="ng-hide icon ion-podium calm" ng-hide="logo({{message}})"></i>
+        <i class="ng-hide icon ion-android-hand balanced" ng-hide="!logo({{message}})"></i>
+        <h2 style="font-weight: bold">{{message.diagnostico}}</h2>
+        <p>{{message.fecha}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+    </ion-item>
+   
+
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-view>

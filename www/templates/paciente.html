@@ -1,0 +1,39 @@
+<ion-view view-title=" {{caso.paciente.nuhsa}}">
+  
+<ion-nav-buttons side="left">
+  <button class="button button-icon icon ion-home" ng-click="atras()"> Menu </button>
+</ion-nav-buttons>
+
+ <ion-content padding="true" class="manual-ios-statusbar-padding">
+
+
+    <div class="list card">
+        <div class="item item-divider">Datos personales</div>
+        <br>
+        <p><b>Nombre:</b> {{caso.paciente.nombre}}</p>
+        <p><b>Sexo:</b> {{caso.paciente.sexo}}</p>
+        <p><b>Edad:</b> {{caso.paciente.edad}}</p>
+        <p><b>Dirección:</b> {{caso.paciente.direccion}}</p>
+        <p><b>Correo:</b> {{caso.paciente.email}}</p>
+        <p><b>Teléfono:</b> {{caso.paciente.telefono}}</p>
+        <br>
+    </div>
+  
+        
+    <div class="list card">
+        <div class="item item-divider" style="color:#00BFFF">Último diagnóstico</div>
+        <div class="item item-wrap" style="text-align: center;">
+                <h2 style="color:#00BFFF">{{ultimo.diagnostico}}</h2>
+                <p>{{ultimo.fecha}}</p>
+        </div>
+    </div>
+    
+    <br>
+
+  </ion-content>
+
+
+
+
+
+</ion-view>

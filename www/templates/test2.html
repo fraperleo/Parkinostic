@@ -1,0 +1,56 @@
+<ion-view view-title=" Test UPDRS">
+  
+<ion-nav-buttons side="left">
+  <button class="button button-icon icon ion-home" ng-click="atras()"></button>
+</ion-nav-buttons>
+
+ <ion-content padding="true" class="manual-ios-statusbar-padding">
+
+
+    <div class="list card">
+        <div class="item item-divider">Seleccione la mano</div>
+        <br>
+        <div class="row">
+            <img class="col-50" width="100%" height="50%" src="img/manoIzquierda.png" ng-click="seleccionarMano(1)"></img>
+            <img class="col-50" width="100%" height="50%" src="img/manoDerecha.png" ng-click="seleccionarMano(2)"></img>
+        </div>
+        <br>
+    </div>
+
+
+    <ion-item class="item range range-positive">
+        <p>Movilidad</p> &nbsp&nbsp
+        <input type="range" ng-model="range.movilidad" min="1" max="5" value="1">
+        &nbsp&nbsp
+        <label style="color:blue">{{range.movilidad}}</label>
+    </ion-item>
+
+    <ion-item class="item range range-positive">
+        <p>Temblor</p> &nbsp&nbsp
+        <input type="range" ng-model="range.temblor" min="1" max="5" value="1">
+        &nbsp&nbsp
+        <label style="color:blue">{{range.temblor}}</label>
+    </ion-item>
+
+    <ion-item class="item range range-positive">
+        <p>Respuesta Visual</p> &nbsp&nbsp
+        <input type="range" ng-model="range.resptVisual" min="1" max="5" value="1">
+        &nbsp&nbsp
+        <label style="color:blue">{{range.resptVisual}}</label>
+    </ion-item>
+
+    <ion-item class="item range range-positive">
+        <p>Control</p> &nbsp&nbsp
+        <input type="range" ng-model="range.control" min="1" max="5" value="1">
+        &nbsp&nbsp
+        <label style="color:blue">{{range.control}}</label>
+    </ion-item>
+  
+
+    <br>
+    <button class="button button-block button-positive" ng-click="guardar()">Guardar</button>
+
+
+  </ion-content>
+
+</ion-view>
